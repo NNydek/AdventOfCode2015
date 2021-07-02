@@ -3,7 +3,6 @@
 #include <initializer_list>
 #include <iostream>
 #include <string>
-#include <vector>
 
 std::string readFile(std::string filename) {
   std::string line;
