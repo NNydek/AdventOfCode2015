@@ -15,10 +15,8 @@ std::string readFile(std::string filename) {
   return contents;
 }
 
-int part1() {
-  std::string filename("input.txt");
-  std::string input;
-  input = readFile(filename);
+int part1(std::string fileInput) {
+  std::string input = fileInput;
 
   int length, width, height;
   std::string ch = "x";
@@ -59,10 +57,8 @@ int part1() {
   return result;
 }
 
-int part2() {
-  std::string filename("input.txt");
-  std::string input;
-  input = readFile(filename);
+int part2(std::string fileInput) {
+  std::string input = fileInput;
 
   int length, width, height;
   std::string ch = "x";
@@ -104,6 +100,10 @@ int part2() {
 }
 
 int main() {
-  std::cout << "Part 1 answer: " << part1() << "\nPart 2 answer: " << part2()
-            << "\n";
+  std::string filename("input.txt");
+  std::string input;
+  input = readFile(filename);
+
+  std::cout << "Part 1 answer: " << part1(input)
+            << "\nPart 2 answer: " << part2(input) << "\n";
 }
