@@ -1,4 +1,5 @@
 #include "md5.h"
+#include <string>
 
 int part1(std::string input) {
   int result = 0;
