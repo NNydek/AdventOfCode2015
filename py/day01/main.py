@@ -2,8 +2,7 @@ def read_input(filename='input.txt'):
     with open(filename, 'r') as file:
         return file.read().strip()
 
-#Part One
-def find_floor(instructions):
+def part1(instructions):
     floor = 0
     for char in instructions:
         if char == '(':
@@ -12,8 +11,7 @@ def find_floor(instructions):
             floor -= 1
     return floor
 
-#Part Two
-def find_basement_position(instructions):
+def part2(instructions):
     floor = 0
     charPosition = 0
     for char in instructions:
@@ -28,13 +26,9 @@ def find_basement_position(instructions):
     return 0
 
 def main():
-    instructions = read_input()
-    #Part One
-    print(find_floor(instructions))
-    
-    #Part Two
-    print(find_basement_position(instructions))
-
+    input = read_input()
+    print(part1(input))
+    print(part2(input))
 
 if __name__ == "__main__":
     main()

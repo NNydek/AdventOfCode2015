@@ -2,8 +2,7 @@ def read_input(filename='input.txt'):
     with open(filename, 'r') as file:
         return file.read().strip().splitlines()
 
-#Part One
-def calculate_wrapping_paper(dimensions):
+def part1(dimensions):
     total_paper = 0
     for dim in dimensions:
         length, width, height = map(int, dim.split('x'))
@@ -14,8 +13,7 @@ def calculate_wrapping_paper(dimensions):
         total_paper += surface_area + smallest_side
     return total_paper
 
-#Part Two
-def calculate_ribbon(dimensions):
+def part2(dimensions):
     total_ribbon = 0
     for dim in dimensions:
         length, width, height = map(int, dim.split('x'))
@@ -27,12 +25,9 @@ def calculate_ribbon(dimensions):
     return total_ribbon
 
 def main():
-    dimensions = read_input()
-    #Part One
-    print(calculate_wrapping_paper(dimensions))
-
-    #Part Two
-    print(calculate_ribbon(dimensions))
+    input = read_input()
+    print(part1(input))
+    print(part2(input))
 
 if __name__ == "__main__":
     main()
