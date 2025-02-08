@@ -40,7 +40,7 @@ def part2(directions):
     return len(combined_unique_positions)
 
 def main():
-    input = (read_input())    
+    input = read_input()
     print(part1(input))
     print(part2(input))
 
